@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+      <meta http-equiv="content-language" content="ja">
+           <title>生駒市図書館アプリ【なによも？（仮称）】 by CODE for IKOMA</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="keywords" content="生駒市,図書館，検索，本">
+	  <meta name="description" content="本を読みたいけどどれを読めばいいか分からない子どもが自分にあった本をめんどくさくなく直観的に探すことのできるアプリ。">
+	  <meta property="og:title" content="生駒市図書館アプリ【なによも？】">
+	  <meta property="og:type" content="website">
+	  <meta property="og:description" content="本を読みたいけどどれを読めばいいか分からない子どもが自分にあった本をめんどくさくなく直観的に探すことのできるアプリ。">
+	  <meta property="og:url" content="image/ogp.png">
+	  <meta property="og:site_name" content="生駒市図書館アプリ【なによも？】">
+	  <meta property="og:image" content="">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style type="text/css">
+.header{
+  display:table-cell;
+  width:100vw;
+  height:10vh;
+  background-image: url(image/bg.jpg);
+  text-align:center;
+  vertical-align:middle;
+  font-size:30px;
+}
+
+.header-image{
+  max-height:20vh;
+}
+
+li{
+  display:block;
+  list-style:none;
+  width:160px;
+  height:160px;
+  
+  float:left;
+  margin:5px;
+  background-repeat: no-repeat;
+  background-position:383px 23px;
+}
+
+label.category{
+  width:160px;
+  height:160px;
+  border-radius: 10px;        /* CSS3草案 */  
+  -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+  -moz-border-radius: 10px;   /* Firefox用 */
+}
+
+.label-title{
+  display:table-cell;
+  width:160px;
+  height:160px;
+  user-select: none;
+  font-size:20px;
+  color:white;
+  text-align:center;
+  vertical-align:middle;
+  width:160px;
+  height:160px;
+}
+
+.category-checked{
+  position:relative;
+  width:80px;
+  height:80px;
+  left: 80px;
+  top:-80px;
+  border-radius:  0 0 10px;        /* CSS3草案 */  
+  -webkit-border-radius: 0 0 10px;    /* Safari,Google Chrome用 */  
+  -moz-border-radius: 0 0 10px;   /* Firefox用 */
+  opacity: 0.6;
+  border-top: 40px solid transparent;
+	border-right: 40px solid #FFF;
+	border-bottom: 40px solid #FFF;
+	border-left: 40px solid transparent;    
+  font-size:30px;
+  color:red;
+}
+
+.cate{
+  position: relative ;
+  left:-10px;
+  top:-10px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.next-button{
+  clear:both;
+}
+
+</style>      
+</head>
+
+<body>
+  <div class="header">
+    どの図書館でさがす？
+  </div>
+  
+  <div class="container">
+    <img class="img img-responsive center-block header-image" src="image/library_setting_comment.jpg">
+  </div>
+  <div class="container">
+   <ul>
+        <li>
+          <label class="category" id="label-doubutu" for="doubutu" style="background-color:#F29BA1;">
+            <input type="checkbox" class="chk-category" id="doubutu"><div class="label-title">どうぶつ<br/>動物</div><div id="category-checked-doubutu" class="category-checked" style="display:none"><img class="cate" src="image/select_cate.png"></div></label>
+            
+        </li>
+        <li>
+          <label class="category" id="label-kousaku" for="kousaku" style="background-color:#9491C0;">
+            <input type="checkbox" class="chk-category" id="kousaku"><div class="label-title">こうさく<br/>工作</div><div id="category-checked-kousaku" class="category-checked" style="display:none"><img class="cate" src="image/select_cate.png"></div></label>
+        </li>
+        <li>
+          <label class="category" id="label-kisetu" for="kisetu" style="background-color:#6FB6CC;">
+            <input type="checkbox" class="chk-category" id="kisetu"><div class="label-title">きせつ<br/>季節</div><div id="category-checked-kisetu" class="category-checked" style="display:none"><img class="cate" src="image/select_cate.png"></div></label>
+        </li>
+        <li>
+          <label class="category" id="label-uchu" for="uchu" style="background-color:#67C090;">
+            <input type="checkbox" class="chk-category" id="uchu"><div class="label-title">うちゅう<br/>宇宙</div><div id="category-checked-uchu" class="category-checked" style="display:none"><img class="cate" src="image/select_cate.png"></div></label>
+        </li>
+        <li>
+          <label class="category" id="label-tabemono" for="tabemono"
+              style="background-color:#E6C568;">
+            <input type="checkbox" class="chk-category" id="tabemono"><div class="label-title">たべもの<br/>食べ物</div><div id="category-checked-tabemono" class="category-checked" style="display:none"><img class="cate" src="image/select_cate.png"></div></label>
+        </li>
+        <li>
+          <label class="category" id="label-osusume" for="osusume"
+              style="background-color:#FEA366;">
+            <input type="checkbox" class="chk-category" id="osusume"><div class="label-title">おすすめ</div><div id="category-checked-osusume" class="category-checked" style="display:none"><img class="cate" src="image/select_cate.png"></div></label>
+        </li>
+      </ul>
+      <div class="text-center next-button">
+        <button><img src="image/next.png"></button>
+      </div>
+  </div>
+<script type="text/javascript">
+$(function(){
+  $(':checkbox:checked').map(function(){
+      $('#category-checked-' + $(this).attr('id')).show();
+  }).get();
+});
+
+$('.chk-category').change(function(){
+  if ($(this).is(':checked')) {
+      $('#category-checked-' + $(this).attr('id')).show();
+	} else {
+      $('#category-checked-' + $(this).attr('id')).hide();
+	}
+});
+</script>
+
+</body>
+
+</html>

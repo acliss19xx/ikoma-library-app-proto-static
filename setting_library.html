@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+      <meta http-equiv="content-language" content="ja">
+     <title>生駒市図書館アプリ【なによも？（仮称）】 by CODE for IKOMA</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="keywords" content="生駒市,図書館，検索，本">
+	  <meta name="description" content="本を読みたいけどどれを読めばいいか分からない子どもが自分にあった本をめんどくさくなく直観的に探すことのできるアプリ。">
+	  <meta property="og:title" content="生駒市図書館アプリ【なによも？】">
+	  <meta property="og:type" content="website">
+	  <meta property="og:description" content="本を読みたいけどどれを読めばいいか分からない子どもが自分にあった本をめんどくさくなく直観的に探すことのできるアプリ。">
+	  <meta property="og:url" content="image/ogp.png">
+	  <meta property="og:site_name" content="生駒市図書館アプリ【なによも？】">
+	  <meta property="og:image" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<style type="text/css">
+.header{
+  display:table-cell;
+  width:100vw;
+  height:5vh;
+  background-image: url(image/bg.jpg);
+  text-align:center;
+  vertical-align:middle;
+  font-size:30px;
+}
+
+.header-image{
+  max-height:20vh;
+}
+
+label.library{
+  display:block;
+  width: 80vw;
+  height:10vh;
+  margin-top:5px;
+  padding-left:10px;
+  padding-top:5px;
+  border-radius: 10px;        /* CSS3草案 */  
+  -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+  -moz-border-radius: 10px;   /* Firefox用 */
+}
+
+span.bg-image{
+  text-align: center;
+  vertical-align :middle;
+  margin-right:10px;
+  display:inline-block;
+  width:35px;
+  height:35px;
+  background:url(image/lib_select.png);
+  background-repeat:no-repeat;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.label-title{
+  user-select: none;
+  font-size:20px;
+  color:white;
+}
+
+
+</style>      
+</head>
+
+<body>
+  <div class="header">
+    えらんだ図書館から本をさがすよ。
+  </div>
+
+<div class="container">
+    <img class="img img-responsive center-block header-image" src="image/library_setting_comment.jpg" height="20px">
+</div>
+<div class="container">
+    <ul class="list-unstyled">
+      <li>
+        <label class="library" id="label-useLibHonkan" for="useLibHonkan" style="background-color:#F29BA1;">
+          <input type="checkbox" class="chk-library" id="useLibHonkan"data-icon="1"><span class="bg-image" id="img-useLibHonkan"></span><span class="label-title">生駒市図書館</span></label>
+      </li>
+      <li>
+        <label class="library" id="label-useLibEkimae" for="useLibEkimae" style="background-color:#9491C0">
+          <input type="checkbox" class="chk-library" id="useLibEkimae" data-icon="2"><span class="bg-image" id="img-useLibEkimae"></span><span class="label-title">生駒駅前図書館</span></label>
+      </li>
+      <li>
+        <label class="library" id="label-useLibKita" for="useLibKita" style="background-color:#6FB6CC;">
+          <input type="checkbox" class="chk-library" id="useLibKita"data-icon="3"><span class="bg-image" id="img-useLibKita"></span><span class="label-title">図書館北分館</span></label>
+      </li>
+      <li>
+        <label class="library" id="label-useLibMinami" for="useLibMinami" style="background-color:#67C090;">
+          <input type="checkbox" class="chk-library" id="useLibMinami"data-icon="4"><span class="bg-image" id="img-useLibMinami"></span><span class="label-title">図書館南分館</span></label>
+      </li>
+      <li>
+        <label class="library" id="label-useLibShika" for="useLibShika" style="background-color:#E6C568;">
+          <input type="checkbox" class="chk-library" id="useLibShika"data-icon="5"><span class="bg-image" id="img-useLibShika"></span><span class="label-title">鹿ノ台ふれあいホール図書館</span></label>
+      </li>
+    </ul>
+    <div class="text-center">
+      <button class="next"><img class="image-next" src="image/next.png"></button>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+  $(':checkbox:checked').map(function(){
+//    $('#img-' + $(this).attr('id')).css('background','url(image/lib_' + $(this).attr('data-icon') + '_on.png)');
+    $('#img-' + $(this).attr('id')).css('background','url(image/lib_select.png) 0px -' + $(this).attr('data-icon') *35 + 'px') ;
+  }).get();
+  
+  $('.label-title').map(function(){
+    if($(this).html().length >= 9){
+      $(this).css('font-size','12px');
+    }
+  });
+});
+
+$('.chk-library').change(function(){
+  if ($(this).is(':checked')) {
+      $('#img-' + $(this).attr('id')).css('background','url(image/lib_select.png) 0px -' + $(this).attr('data-icon') *35 + 'px') ;
+	} else {
+      $('#img-' + $(this).attr('id')).css('background','url(image/lib_select.png)  0px 0px');
+	}
+});
+
+</script>
+
+<!--    
+    useLibHonkan:{longname:'生駒市図書館', name:'本館',iconName:'いこま',iconColor:'#888888',select_image:'lib_ikoma'},
+    useLibEkimae:{longname:'生駒駅前図書館', name:'駅前',iconName:'えき',iconColor:'#888888',select_image:'lib_eki'},
+    useLibKita:{longname:'図書館北分館',name:'北館',iconName:'きた',iconColor:'#888888',select_image:'lib_kita'},
+    useLibMinami:{longname:'図書館南分館',name:'南館',iconName:'みなみ',iconColor:'#888888',select_image:'lib_minami'},
+    useLibShika:{longname:'鹿ノ台ふれあいホール図書館',name:'',iconName:'しか',iconColor:'#888888',select_image:'lib_shika'}
+-->
+
+</body>
+
+</html>
