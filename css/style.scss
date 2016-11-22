@@ -1,0 +1,35 @@
+@import "style_master.scss";
+
+.setting-library{
+    @import "presets/_library.scss";
+}
+
+.setting-generation{
+    @import "presets/_generation.scss";
+}
+
+.search-category{
+    @import "presets/_search_category.scss";
+}
+
+.view_detail{
+    @import "presets/_view_detail.scss";
+}
+
+@media screen and (max-width:640px){
+    .setting-library{
+        @import "presets/_library_max640.scss";
+    }
+    
+    .setting-generation{
+        @import "presets/_generation_max640.scss";
+    }
+    
+    .search-category{
+        @import "presets/_search_category_max640.scss";
+    }
+    
+    .view_detail{
+        @import "presets/_view_detail_max640.scss";
+    }
+}

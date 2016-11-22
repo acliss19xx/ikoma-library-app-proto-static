@@ -1,0 +1,60 @@
+.header{
+  display:table-cell;
+  width:100vw;
+  height:5vh;
+  background-image: url(../image/bg.jpg);
+  text-align:center;
+  vertical-align:middle;
+  font-size:30px;
+}
+
+.header-image{
+  max-height:20vh;
+}
+
+li{
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -o-box;  
+  display: -ms-box; 
+  display: box; 
+  -webkit-box-align: center; 
+  -moz-box-align: center; 
+  -o-box-align: center; 
+  -ms-box-align: center; 
+  box-align: center;   
+
+}
+label{
+  display:block;
+  width: 80vw;
+  height:10vh;
+  margin-top:5px;
+  padding-left:10px;
+  padding-top:5px;
+  border-radius: 10px;       
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+span.bg-image{
+  text-align: center;
+  vertical-align :middle;
+  margin-right:10px;
+  display:inline-block;
+  width:35px;
+  height:35px;
+  background:url(../image/age_select.png);
+  background-repeat:no-repeat;
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.label-title{
+  user-select: none;
+  font-size:20px;
+  color:white;
+}

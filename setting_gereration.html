@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+      <meta http-equiv="content-language" content="ja">
+     <title>生駒市図書館アプリ【なによも？（仮称）】 by CODE for IKOMA</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="keywords" content="生駒市,図書館，検索，本">
+	  <meta name="description" content="本を読みたいけどどれを読めばいいか分からない子どもが自分にあった本をめんどくさくなく直観的に探すことのできるアプリ。">
+	  <meta property="og:title" content="生駒市図書館アプリ【なによも？】">
+	  <meta property="og:type" content="website">
+	  <meta property="og:description" content="本を読みたいけどどれを読めばいいか分からない子どもが自分にあった本をめんどくさくなく直観的に探すことのできるアプリ。">
+	  <meta property="og:url" content="image/ogp.png">
+	  <meta property="og:site_name" content="生駒市図書館アプリ【なによも？】">
+	  <meta property="og:image" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="css/style.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<div class="setting-generation">
+  <div class="header">
+    よみたい本をさがす<br>さいしょのせっていです
+  </div>
+
+  <div class="container">
+      <img class="img img-responsive center-block header-image" src="image/setting_comment_generation.jpg" height="20px">
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-xs-12">
+          <label id="label-age-1" for="age-1" style="background-color:#F29BA1;">
+            <input type="radio" name="age" class="chk-age" id="age-1" data-icon="1"><span class="bg-image" id="img-age-1"></span><span class="label-title">0～2さい</span></label>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <label id="label-age-2" for="age-2" style="background-color:#9491C0">
+            <input type="radio" name="age" class="chk-age" id="age-2" data-icon="2"><span class="bg-image" id="img-age-2"></span><span class="label-title">3～6さい</span></label>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <label id="label-age-3" for="age-3" style="background-color:#6FB6CC;">
+            <input  type="radio" name="age" class="chk-age" id="age-3"data-icon="3"><span class="bg-image" id="img-age-3"></span><span class="label-title">小学1～3年</span></label>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <label id="label-age-4" for="age-4" style="background-color:#67C090;">
+            <input  type="radio" name="age" class="chk-age" id="age-4"data-icon="4"><span class="bg-image" id="img-age-4"></span><span class="label-title">小学4～6年</span></label>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <label id="label-age-5" for="age-5" style="background-color:#E6C568;">
+            <input  type="radio" name="age" class="chk-age" id="age-5"data-icon="5"><span class="bg-image" id="img-age-5"></span><span class="label-title">中学生～</span></label>
+        </div>
+    </div>
+    <div class="text-center">
+      <button class="next"><img class="image-next" src="image/next.png"></button>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){
+  $('.label-title').map(function(){
+    if($(this).html().length >= 9){
+      $(this).html('<span>' + $(this).html().slice(0,9) + '</span><span style="font-size:12px">' + $(this).html().slice(9) + '</span>')
+    }
+  });
+});
+
+$('.chk-age').change(function(){
+    $('input[name=age]').map(function(){
+        $('#img-' + $(this).attr('id')).css('background','url(image/age_select.png) 0px 0px');
+    }).get();
+    
+    $('#img-' + $('input[name=age]:checked').attr('id')).css('background','url(image/age_select.png) 0px 35px');
+});
+
+</script>
+
+<!--    
+    useLibHonkan:{longname:'生駒市図書館', name:'本館',iconName:'いこま',iconColor:'#888888',select_image:'lib_ikoma'},
+    useLibEkimae:{longname:'生駒駅前図書館', name:'駅前',iconName:'えき',iconColor:'#888888',select_image:'lib_eki'},
+    useLibKita:{longname:'図書館北分館',name:'北館',iconName:'きた',iconColor:'#888888',select_image:'lib_kita'},
+    useLibMinami:{longname:'図書館南分館',name:'南館',iconName:'みなみ',iconColor:'#888888',select_image:'lib_minami'},
+    useLibShika:{longname:'鹿ノ台ふれあいホール図書館',name:'',iconName:'しか',iconColor:'#888888',select_image:'lib_shika'}
+-->
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+.header {
+  display: table-cell;
+  width: 100vw;
+  height: 10vh;
+  background-image: url(image/bg.jpg);
+  text-align: center;
+  vertical-align: middle;
+  font-size: 30px; }
+
+.header-image {
+  max-height: 20vh; }
+
+.category-frame {
+  display: block;
+  list-style: none;
+  width: 160px;
+  height: 160px;
+  padding: 0;
+  margin: 15px;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: 383px 23px; }
+
+label.category {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+
+.label-title {
+  display: table-cell;
+  width: 160px;
+  height: 160px;
+  user-select: none;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  width: 160px;
+  height: 160px; }
+
+.category-checked {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  left: 80px;
+  top: -80px;
+  border-radius: 0 0 10px;
+  -webkit-border-radius: 0 0 10px;
+  -moz-border-radius: 0 0 10px;
+  opacity: 0.6;
+  border-top: 40px solid transparent;
+  border-right: 40px solid #FFF;
+  border-bottom: 40px solid #FFF;
+  border-left: 40px solid transparent;
+  font-size: 30px;
+  color: red; }
+
+.cate {
+  position: relative;
+  left: -10px;
+  top: -10px; }
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px; }
+
+.search-button {
+  clear: both; }
+
+button.search {
+  border: 0px;
+  background-repeat: no-repeat;
+  background-image: url(../image/search.png);
+  width: 155px;
+  height: 155px;
+  background-color: transparent; }
+
+button.mic {
+  border: 0px;
+  background-repeat: no-repeat;
+  background-image: url(../image/mic.png);
+  background-size: 155px;
+  width: 155px;
+  height: 155px;
+  background-color: transparent; }
+
+button.setting {
+  border: 0px;
+  background-repeat: no-repeat;
+  background-image: url(../image/btn_setting.png);
+  background-size: 155px;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background-color: #48D1CC; }
+
+/*# sourceMappingURL=_search_category.css.map */

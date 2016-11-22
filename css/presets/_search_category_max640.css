@@ -1,0 +1,95 @@
+.category-container {
+  display: block;
+  width: 350px; }
+
+.category-frame {
+  display: block;
+  list-style: none;
+  width: 120px;
+  height: 80px;
+  padding: 0;
+  margin: 5px;
+  float: left; }
+
+label.category {
+  width: 120px;
+  height: 80px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+
+.label-title {
+  display: table-cell;
+  width: 120px;
+  height: 80px;
+  user-select: none;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  vertical-align: middle; }
+
+.category-checked {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  left: 60px;
+  top: -60px;
+  border-radius: 0 0 10px;
+  -webkit-border-radius: 0 0 10px;
+  -moz-border-radius: 0 0 10px;
+  opacity: 0.6;
+  border-top: 30px solid transparent;
+  border-right: 30px solid #FFF;
+  border-bottom: 30px solid #FFF;
+  border-left: 30px solid transparent; }
+
+.cate {
+  position: relative;
+  left: -10px;
+  top: -10px;
+  max-width: 50px;
+  max-height: 50px; }
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px; }
+
+.search-button {
+  clear: both;
+  width: 260px; }
+  .search-button button.search {
+    border: 0px;
+    background-repeat: no-repeat;
+    background-image: url(../image/search.png);
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent; }
+  .search-button button.setting {
+    border: 0px;
+    background-repeat: no-repeat;
+    background-image: url(../image/btn_setting.png);
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #48D1CC; }
+  .search-button button.mic {
+    border: 0px;
+    background-repeat: no-repeat;
+    background-image: url(../image/mic.png);
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent; }
+  .search-button button.setting {
+    border: 0px;
+    background-repeat: no-repeat;
+    background-image: url(../image/btn_setting.png);
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #48D1CC; }
+
+/*# sourceMappingURL=_search_category_max640.css.map */

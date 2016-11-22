@@ -1,0 +1,11 @@
+.header {
+  display: table-cell;
+  width: 100vw;
+  height: 5vh;
+  background-image: url(../image/bg.jpg);
+  vertical-align: middle;
+  font-size: 30px; }
+  .header .detail_title span {
+    font-size: 15px; }
+
+/*# sourceMappingURL=_view_detail_max640.css.map */
