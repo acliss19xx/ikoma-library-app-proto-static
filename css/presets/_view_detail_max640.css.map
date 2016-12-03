@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,OAAO;EACL,OAAO,EAAE,UAAU;EACnB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,GAAG;EACX,gBAAgB,EAAE,oBAAoB;EACtC,cAAc,EAAE,MAAM;EACtB,SAAS,EAAE,IAAI;EAGb,0BAAI;IACA,SAAS,EAAC,IAAI",
-"sources": ["_view_detail_max640.scss"],
-"names": [],
-"file": "_view_detail_max640.css"
-}

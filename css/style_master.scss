@@ -54,7 +54,7 @@ img {max-width:100%; width :auto; }
 #side_container{
     
     width:100%;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     text-align: center;
     background:url(/images/bg.jpg);
@@ -65,10 +65,10 @@ img {max-width:100%; width :auto; }
 }
 
 img.bigbtn{display: none}
-imb.minibtn{display: block}
+img.minibtn{display: block}
 
 .navbar{
-     padding: 12px;
+    padding: 12px;
 }
 .navbar li{
     display: inline;
@@ -86,14 +86,14 @@ imb.minibtn{display: block}
 
 
 .bookbox{
-    display: inline-block;
+  display: inline-block;
 	vertical-align: top; 
 	height:200px;
-    width:200px;
+  width:200px;
 	margin:0px 10px;
-    text-align: center;
-    word-wrap : break-word;
-    white-space: normal;
+  text-align: center;
+  word-wrap : break-word;
+  white-space: normal;
    
 }
 
@@ -276,17 +276,179 @@ td.book_big_image{
 }
 
 
+/*===============================================
+画面の横幅が768pxまで（タブレット用）
+===============================================*/
 @media screen and (max-width: 768px){
 
 
 }
 
 
+/*===============================================
+画面の横幅が640pxまで（スマホ用）
+===============================================*/
 @media screen and (max-width:640px){
-    
+.search-category .category-container{
+  display:block;
+  width:350px;
+}    
+.search-category .category-frame {
+  display: block;
+  list-style: none;
+  width: 120px;
+  height: 80px;
+  padding: 0;
+  margin: 5px;
+  float: left;
+}
+.search-category label.category {
+  width: 120px;
+  height: 80px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+.search-category .label-title {
+  display: table-cell;
+  width: 120px;
+  height: 80px;
+  user-select: none;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  }
+.search-category .category-checked {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  left: 60px;
+  top: -60px;
+  border-radius: 0 0 10px;
+  -webkit-border-radius: 0 0 10px;
+  -moz-border-radius: 0 0 10px;
+  opacity: 0.6;
+  border-top: 30px solid transparent;
+  border-right: 30px solid #FFF;
+  border-bottom: 30px solid #FFF;
+  border-left: 30px solid transparent;
+  }
+.search-category .cate {
+  position: relative;
+  left: -10px;
+  top: -10px;
+  max-width:50px;
+  max-height:50px;}
+.search-category input[type="radio"] {
+  position: absolute;
+  left: -9999px; }
 
+.search-category .search-button {
+  clear: both;
+  width:260px;}
+
+.search-category button.search {
+  border: 0px;
+  background-repeat: no-repeat;
+  background-image: url(/images/search.png);
+  background-size: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: transparent; }
+
+.search-category button.mic {
+  border: 0px;
+  background-repeat: no-repeat;
+  background-image: url(/images/mic.png);
+  background-size: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: transparent; }
+
+.search-category button.setting {
+  background-size: 100px;
+  width: 100px;
+  height: 100px;
+}
+  
+  .view_detail .header {
+    display: table-cell;
+    width: 100vw;
+    height: 5vh;
+    background-image: url(../image/bg.jpg);
+    vertical-align: middle;
+    font-size: 26px; }
+  .view_detail .header .detail_title span {
+    font-size: 15px; } 
 
 }
+
+.view_detail .header {
+  display: table-cell;
+  width: 100vw;
+  height: 5vh;
+  background-image: url(/images/bg.jpg);
+  vertical-align: middle;
+  font-size: 26px; }
+  .view_detail .header .detail_image {
+    display: block;
+    float: left;
+    width: 20vw;
+    text-align: right; }
+  .view_detail .header .detail_title {
+    margin-left: 20vw;
+/*    width: 80vw; */
+    color:#FFF;
+    padding-left: 1vw;
+    padding-right: 1vw; }
+.view_detail .book_info {
+  margin-top: 10vw; }
+.view_detail .rakuten-books {
+  margin-top: 10vw; }
+
+.text-center button.next{
+  border:0px;
+  width:155px;
+  height:45px;
+  background-image:url(/images/next.png);
+  background-repeat : no-repeat;
+  background-position:top left;
+  background-color: transparent;
+}
+
+.text-center button.back{
+  border:0px;
+  width:155px;
+  height:45px;
+  background-image:url(/images/back.png);
+  background-repeat : no-repeat;
+  background-position:top left;
+  background-color: transparent;
+}
+.open_app{
+  background-image:url(/images/bg.jpg) ;
+  background-repeat:repeat;
+  padding:30px 10px;
+  box-shadow:0px 6px 5px 0px #ebe2d3;
+  -moz-box-shadow:0px 6px 5px 0px  #ebe2d3;
+  -webkit-box-shadow:0px 6px 5px 0px  #ebe2d3;
+  margin-bottom:5px;
+  color:#fff;
+  
+}
+
+p.by{
+  font-size:70%;
+  color:#666;
+  line-height: 1.5em;
+  margin:5px 30px;
+}
+
+.text-center{
+  text-align:center;
+  margin:0px auto;
+}
+
 .setting-library .header {
   display: table-cell;
   width: 100vw;
@@ -294,7 +456,7 @@ td.book_big_image{
   background-image: url(/images/bg.jpg);
   text-align: center;
   vertical-align: middle;
-  font-size: 30px; }
+  font-size: 26px; }
 .setting-library .header-image {
   max-height: 20vh; }
 .setting-library ul.list-unstyled {
@@ -350,7 +512,7 @@ td.book_big_image{
   background-image: url(/images/bg.jpg);
   text-align: center;
   vertical-align: middle;
-  font-size: 30px; }
+  font-size: 26px; }
 .setting-generation .header-image {
   max-height: 20vh; }
 .setting-generation li {
@@ -399,41 +561,45 @@ td.book_big_image{
   background-image: url(/images/bg.jpg);
   text-align: center;
   vertical-align: middle;
-  font-size: 30px; }
+  font-size: 26px; }
 .search-category .header-image {
   max-height: 20vh; }
+
+.search-category category-container{
+  display:block;
+  text-align:center;
+}
 .search-category .category-frame {
   display: block;
   list-style: none;
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   padding: 0;
-  margin: 15px;
+  margin: 5px;
   float: left;
   background-repeat: no-repeat;
   background-position: 383px 23px; }
 .search-category label.category {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px; }
 .search-category .label-title {
   display: table-cell;
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   user-select: none;
   font-size: 20px;
   color: white;
   text-align: center;
   vertical-align: middle;
-  width: 160px;
-  height: 160px; }
+}
 .search-category .category-checked {
   position: relative;
   width: 80px;
   height: 80px;
-  left: 80px;
+  left: 60px;
   top: -80px;
   border-radius: 0 0 10px;
   -webkit-border-radius: 0 0 10px;
@@ -443,7 +609,7 @@ td.book_big_image{
   border-right: 40px solid #FFF;
   border-bottom: 40px solid #FFF;
   border-left: 40px solid transparent;
-  font-size: 30px;
+  font-size: 26px;
   color: red; }
 .search-category .cate {
   position: relative;
@@ -463,3 +629,22 @@ td.book_big_image{
   width: 155px;
   height: 155px;
   background-color: transparent; }
+
+.search-category button.mic {
+  border: 0px;
+  background-repeat: no-repeat;
+  background-image: url(/images/mic.png);
+  width: 155px;
+  height: 155px;
+  background-color: transparent; }
+
+.search-category button.setting {
+  border: 0px;
+  background-repeat: no-repeat;
+  background-image: url(/images/btn_setting_gray.png);
+  background-size: 155px;
+  width: 155px;
+  height: 155px;
+  background-color: transparent;
+}
+  

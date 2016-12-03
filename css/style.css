@@ -42,6 +42,7 @@ img {
   height: 100%;
   position: relative;
   margin: auto;
+  margin-bottom:100px;
   text-align: center;
   background: url(/images/paper.jpg) repeat;
   overflow-x: hidden; }
@@ -52,7 +53,7 @@ img {
 
 #side_container {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   text-align: center;
   background: url(/images/bg.jpg);
@@ -232,7 +233,7 @@ td.book_big_image {
   background-image: url(/images/bg.jpg);
   text-align: center;
   vertical-align: middle;
-  font-size: 30px; }
+  font-size: 26px; }
 
 .setting-library .header-image {
   max-height: 20vh; }
@@ -295,7 +296,7 @@ td.book_big_image {
   background-image: url(/images/bg.jpg);
   text-align: center;
   vertical-align: middle;
-  font-size: 30px; }
+  font-size: 26px; }
 
 .setting-generation .header-image {
   max-height: 20vh; }
@@ -354,6 +355,11 @@ td.book_big_image {
 
 .search-category .header-image {
   max-height: 20vh; }
+
+.search-category category-container{
+  display:block;
+  text-align:center;
+}
 
 .search-category .category-frame {
   display: block;
